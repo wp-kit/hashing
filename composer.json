@@ -1,0 +1,35 @@
+{
+	"name": "wp-kit/hashing",
+	"description": "A Wordpress PHP Component to handle password hashing",
+	"keywords": ["wordpress", "themosis", "oop", "hashing"],
+	"homepage" : "https://github.com/wp-kit/hashing",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Creative Little Dots",
+			"email" : "tech@creativelittledots.co.uk",
+			"homepage" : "https://creativelittledots.co.uk/",
+			"role" : "Developers"
+		}
+	],
+	"require": {
+        "php": ">=5.6.4",
+        "illuminate/support": "5.*"
+    },
+	"type": "library",
+	"autoload": {
+        "psr-4": {
+            "WPKit\\Hashing\\": "src/Hashing" 
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+		"preferred-install": "dist"
+	},
+	"repositories": [
+	],
+	"scripts": {
+	}
+}
