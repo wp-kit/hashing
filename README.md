@@ -1,6 +1,6 @@
 # WPKit Hashing
 
-This is a Wordpress PHP Component to handles password hashing. 
+This is a Wordpress PHP Component that handles password hashing. 
 
 This PHP Component was built to run within an Illuminate Container so is perfect for frameworks such as Themosis.
 
