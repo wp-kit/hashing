@@ -1,6 +1,6 @@
 {
 	"name": "wp-kit/hashing",
-	"description": "A Wordpress PHP Component to handle password hashing",
+	"description": "A Wordpress PHP Component that handles password hashing",
 	"keywords": ["wordpress", "themosis", "oop", "hashing"],
 	"homepage" : "https://github.com/wp-kit/hashing",
 	"license": "MIT",
