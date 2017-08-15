@@ -3,6 +3,7 @@
 namespace WPKit\Hashing;
 
 use Illuminate\Support\ServiceProvider;
+use WPKit\Hashing\Facades\Hasher as Facade;
 
 class HashingServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,9 @@ class HashingServiceProvider extends ServiceProvider
      */
     public function register()
     {
+	
+	Facade::setRootApplication($this->app);
+	    
         $this->app->singleton('hash', function () {
             return new Hasher(new \PasswordHash( 8, true ));
         });
