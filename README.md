@@ -61,6 +61,18 @@ $provider = new WPKit\Hashing\HashingServiceProvider($container); // inject into
 $provider->register(); //register service provider
 ```
 
+### Add Facade
+
+```php
+//inside themosis-theme/resource/config/theme.config.php
+
+'aliases' => [
+    //
+    'Hasher' => WPKit\Hashing\Facades\Hasher::class
+    //
+]
+```
+
 ## Usage
 
 If you are using WPKit Basic Auth, hashing will work out of the box as Illuminate\Auth listens to the hash binding on the container which is register by HashingServiceProvider. However you can use the Hasher elsewhere in your application if you wish:
