@@ -20,7 +20,9 @@ If you're using Themosis, install via composer in the Themosis route folder, oth
 composer require "wp-kit/hashing"
 ```
 
-## Registering Service Provider
+## Setup
+
+### Add Service Provider
 
 **Within Themosis Theme**
 
@@ -30,7 +32,7 @@ Just register the service provider in the providers config:
 //inside themosis-theme/resources/config/providers.config.php
 
 return [
-    Theme\Providers\RoutingService::class,
+    //
     WPKit\Hashing\HashingServiceProvider::class
 ];
 ```
@@ -59,8 +61,7 @@ $provider = new WPKit\Hashing\HashingServiceProvider($container); // inject into
 $provider->register(); //register service provider
 ```
 
-
-## Using Hasher
+## Usage
 
 If you are using WPKit Basic Auth, hashing will work out of the box as Illuminate\Auth listens to the hash binding on the container which is register by HashingServiceProvider. However you can use the Hasher elsewhere in your application if you wish:
 
