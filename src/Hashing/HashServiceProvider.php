@@ -4,7 +4,7 @@ namespace WPKit\Hashing;
 
 use Illuminate\Support\ServiceProvider;
 
-class HashServiceProvider extends ServiceProvider
+class HashingServiceProvider extends ServiceProvider
 {
 
     /**
