@@ -65,13 +65,11 @@ $provider->register(); //register service provider
 If you are using WPKit Basic Auth, hashing will work out of the box as Illuminate\Auth listens to the hash binding on the container which is register by HashingServiceProvider. However you can use the Hasher elsewhere in your application if you wish:
 
 ```php
-
 use WPKit\Hashing\Facades\Hasher;
 
 $hashed = Hasher::make('some_password');
 
 $validated = Hasher::check('some_password', $hashed);
-
 ```
 
 ## Requirements
