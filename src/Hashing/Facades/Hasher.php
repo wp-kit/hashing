@@ -1,6 +1,6 @@
 <?php
 
-	namespace WPKit\Notifications\Facades;
+	namespace WPKit\Hashing\Facades;
 	
 	use Illuminate\Support\Facades\Facade;
 	
