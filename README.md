@@ -68,10 +68,6 @@ If you are using WPKit Basic Auth, hashing will work out of the box as Illuminat
 
 use WPKit\Hashing\Facades\Hasher;
 
-// as php function as below
-
-// using facade
-
 $hashed = Hasher::make('some_password');
 
 $validated = Hasher::check('some_password', $hashed);
