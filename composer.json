@@ -20,10 +20,7 @@
 	"autoload": {
         "psr-4": {
             "WPKit\\Hashing\\": "src/Hashing" 
-        },
-        "files": [
-            "src/helpers.php"
-        ]
+        }
     },
     "config": {
 		"preferred-install": "dist"
