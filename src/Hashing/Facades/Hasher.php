@@ -4,7 +4,7 @@
 	
 	use Illuminate\Support\Facades\Facade;
 	
-	class Hasher extends BaseFacade {
+	class Hasher extends Facade {
 		
 	    /**
 	     * Get the registered name of the component.
