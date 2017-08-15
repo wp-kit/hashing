@@ -72,6 +72,9 @@ use WPKit\Hashing\Facades\Hasher;
 
 // using facade
 
+$hashed = Hasher::make('some_password');
+
+$validated = Hasher::check('some_password', $hashed);
 
 ```
 
