@@ -1,8 +1,8 @@
 # wp-kit/hashing
 
-This is a Wordpress PHP Component that handles password hashing. 
+This is a wp-kit component that handles password hashing. 
 
-This PHP Component was built to run within an [```Illuminate\Container\Container```](https://github.com/illuminate/container/blob/master/Container.php) so is perfect for frameworks such as [```Themosis```](http://framework.themosis.com/).
+This component was built to run within an [```Illuminate\Container\Container```](https://github.com/illuminate/container/blob/master/Container.php) so is perfect for frameworks such as [```Themosis```](http://framework.themosis.com/), [```Assely```](https://assely.org/) and [```wp-kit/theme```](https://github.com/wp-kit/theme).
 
 ```wp-kit/hashing``` was built to support [```wp-kit/auth```](https://github.com/wp-kit/auth) when authenticating users and comparing the input password against the stored password in Wordpress.
 
@@ -10,7 +10,7 @@ We decided to extrapolate ```wp-kit/hashing``` for a few reasons. Such as when w
 
 There are many good reasons to use ```Eloquent``` but often password hashing on users can get in the way of using ```Eloquent``` to manage users.
 
-In ```Themosis```, [```Themosis\User\UserFactory```](https://github.com/themosis/framework/blob/master/src/Themosis/User/UserFactory.php) falls back on traditional Wordpress functions to create the user, but just in case you need to stick to a traditional ```Eloquent``` Model, this repo is for you!
+In ```Themosis```, [```Themosis\User\UserFactory```](https://github.com/themosis/framework/blob/master/src/Themosis/User/UserFactory.php) falls back on traditional WordPress functions to create the user, but just in case you need to stick to a traditional ```Eloquent``` Model, this repo is for you!
 
 ## Installation
 
@@ -24,12 +24,10 @@ composer require "wp-kit/hashing"
 
 ### Add Service Provider
 
-**Within Themosis Theme**
-
 Just register the service provider in the providers config:
 
 ```php
-//inside themosis-theme/resources/config/providers.config.php
+//inside theme/resources/config/providers.config.php
 
 return [
     //
@@ -37,31 +35,9 @@ return [
 ];
 ```
 
-**Within functions.php**
-
-If you are just using this component standalone then add the following the ```functions.php```
-
-```php
-// within functions.php
-
-// make sure composer has been installed
-if( ! file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-	
-	wp_die('Composer has not been installed, try running composer', 'Dependancy Error');
-	
-}
-
-// Use composer to load the autoloader.
-require __DIR__ . '/vendor/autoload.php';
-
-$container = new Illuminate\Container\Container(); // create new app container
-
-$provider = new WPKit\Hashing\HashingServiceProvider($container); // inject into service provider
-
-$provider->register(); //register service provider
-```
-
 ### Add Facade
+
+If you are using Themosis or another ```Iluminate``` driven framework, you may want to add ```Facades```, simply add them to your aliases:
 
 ```php
 //inside themosis-theme/resource/config/theme.config.php
