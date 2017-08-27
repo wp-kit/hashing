@@ -1,7 +1,7 @@
 {
 	"name": "wp-kit/hashing",
 	"description": "A wp-kit component that handles password hashing",
-	"keywords": ["wordpress", "wp-kit", "password", "hashing", "authentication"],
+	"keywords": ["wordpress", "wp-kit", "themosis", "assely", "password", "hashing", "authentication", "auth"],
 	"homepage" : "https://github.com/wp-kit/hashing",
 	"license": "MIT",
 	"authors": [
