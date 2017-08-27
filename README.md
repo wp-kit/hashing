@@ -6,9 +6,7 @@ This component was built to run within an [```Illuminate\Container\Container```]
 
 ```wp-kit/hashing``` was built to support [```wp-kit/auth```](https://github.com/wp-kit/auth) when authenticating users and comparing the input password against the stored password in WordPress.
 
-There are many good reasons to use [```Eloquent```](https://laravel.com/docs/5.4/eloquent) but often password hashing on users can get in the way of using ```Eloquent``` to manage users.
-
-In ```Themosis```, [```Themosis\User\UserFactory```](https://github.com/themosis/framework/blob/master/src/Themosis/User/UserFactory.php) falls back on traditional WordPress functions to create the user, but just in case you need to stick to a traditional ```Eloquent``` Model, this repo is for you!
+There are many good reasons to use [```Eloquent```](https://laravel.com/docs/5.4/eloquent) but often password hashing on users can get in the way of using ```Eloquent``` to manage authentication in WordPress, and ```wp-kit/hashing``` aims to solve this problem.
 
 ## Installation
 
