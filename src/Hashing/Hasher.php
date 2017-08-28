@@ -6,6 +6,10 @@ use Illuminate\Contracts\Hashing\Hasher as HasherContract;
 
 class Hasher implements HasherContract
 {
+	
+	/**
+     * @var \PasswordHash
+     */
 	protected $hasher;
 	
     /**
@@ -15,6 +19,12 @@ class Hasher implements HasherContract
      */
     protected $rounds = 10;
     
+    /**
+     * The constructor
+     *
+     * @param  \PasswordHash  $hasher
+     * @return void
+     */
     public function __construct(\PasswordHash $hasher) {
 	    
 	    $this->hasher = $hasher;
